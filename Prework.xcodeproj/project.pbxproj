@@ -16,6 +16,7 @@
 		832EAA1F2775C4E9009EF4C0 /* PreworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832EAA1E2775C4E9009EF4C0 /* PreworkTests.swift */; };
 		832EAA292775C4E9009EF4C0 /* PreworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832EAA282775C4E9009EF4C0 /* PreworkUITests.swift */; };
 		832EAA2B2775C4E9009EF4C0 /* PreworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832EAA2A2775C4E9009EF4C0 /* PreworkUITestsLaunchTests.swift */; };
+		83520BB92776488300B2AB87 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83520BB82776488300B2AB87 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		832EAA242775C4E9009EF4C0 /* PreworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PreworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		832EAA282775C4E9009EF4C0 /* PreworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreworkUITests.swift; sourceTree = "<group>"; };
 		832EAA2A2775C4E9009EF4C0 /* PreworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		83520BB82776488300B2AB87 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		83520BBA27767DB600B2AB87 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				832EAA092775C4E7009EF4C0 /* SceneDelegate.swift */,
 				832EAA0B2775C4E7009EF4C0 /* ViewController.swift */,
 				832EAA0D2775C4E7009EF4C0 /* Main.storyboard */,
+				83520BB82776488300B2AB87 /* SettingsViewController.swift */,
+				83520BBA27767DB600B2AB87 /* MyPlayground.playground */,
 				832EAA102775C4E9009EF4C0 /* Assets.xcassets */,
 				832EAA122775C4E9009EF4C0 /* LaunchScreen.storyboard */,
 				832EAA152775C4E9009EF4C0 /* Info.plist */,
@@ -261,6 +266,7 @@
 				832EAA0C2775C4E7009EF4C0 /* ViewController.swift in Sources */,
 				832EAA082775C4E7009EF4C0 /* AppDelegate.swift in Sources */,
 				832EAA0A2775C4E7009EF4C0 /* SceneDelegate.swift in Sources */,
+				83520BB92776488300B2AB87 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +445,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G4YKGU7G4Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Prework/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -466,6 +473,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G4YKGU7G4Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Prework/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
