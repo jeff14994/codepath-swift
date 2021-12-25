@@ -55,8 +55,8 @@ class ViewController: UIViewController {
         tipControl.setTitle(String(Int(tip3*100)) + "%", forSegmentAt: 2)
         // First Responder
         billAmountTextField.becomeFirstResponder()
-        // Get number-only keyboard
-        billAmountTextField.keyboardType = .numberPad
+        // Get dot and number-only keyboard
+        billAmountTextField.keyboardType = .decimalPad
 
         // Round the upper and down View
         upperView.layer.cornerRadius = 10
