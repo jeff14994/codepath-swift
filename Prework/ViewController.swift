@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var people: UILabel!
-    @IBOutlet weak var average: UILabel!
+    @IBOutlet weak var averageLabel: UILabel!
     @IBAction func stepper(_ sender: UIStepper) {
         people.text = String(Int(sender.value))
     }
@@ -41,6 +41,8 @@ class ViewController: UIViewController {
         let tip3 = defaults.double(forKey: "tip3")
         // Get bill amount from text field input
         let bill = Double(billAmountTextField.text!) ?? 0
+        // Convert people to integer
+        let people = Double(people.text!) ?? 1
         print("tip1: ", tip1)
         print("tip2: ", tip2)
         print("tip3: ", tip3)
@@ -53,12 +55,13 @@ class ViewController: UIViewController {
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         
         let total = bill + tip
-        
+        let average = total / people
         // Update Tip amount label
         tipAmountLabel.text = String(format: "$%.2f", tip)
         // Update Total amount
         totalLabel.text = String(format: "$%.2f", total)
-    
+        // Update average amount
+        averageLabel.text = String(format: "$%.2f", average)
     
         
     }

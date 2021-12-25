@@ -90,8 +90,8 @@
                                     <action selector="stepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="ORg-jJ-Ic0"/>
                                 </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngX-5T-hen">
-                                <rect key="frame" x="267" y="237" width="101" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngX-5T-hen">
+                                <rect key="frame" x="267" y="237" width="83" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -116,7 +116,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="average" destination="Kii-hR-mLI" id="nAR-r5-ifg"/>
+                        <outlet property="averageLabel" destination="Kii-hR-mLI" id="sq7-sk-rPq"/>
                         <outlet property="billAmountTextField" destination="OA9-zQ-8NW" id="BCs-lb-hZU"/>
                         <outlet property="people" destination="ngX-5T-hen" id="JsS-na-qaF"/>
                         <outlet property="tipAmountLabel" destination="PbZ-HP-Wap" id="PkW-Lm-LVP"/>
