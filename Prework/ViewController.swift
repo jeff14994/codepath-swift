@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var upperView: UIView!
     @IBOutlet weak var downView: UILabel!
+    @IBAction func resetButton(_ sender: Any) {
+        billAmountTextField.text = nil
+        people.text = String(1)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,9 +39,15 @@ class ViewController: UIViewController {
         tipControl.setTitle(String(Int(tip3*100)) + "%", forSegmentAt: 2)
         // First Responder
         billAmountTextField.becomeFirstResponder()
+        // Get number-only keyboard
+        billAmountTextField.keyboardType = .numberPad
+
         // Round the upper and down View
         upperView.layer.cornerRadius = 10
         downView.layer.cornerRadius = 10
+        // Label Corner
+        people.layer.cornerRadius = 5
+        people.layer.masksToBounds = true
     }
 
     @IBAction func calculateTip(_ sender: Any) {
@@ -50,9 +60,9 @@ class ViewController: UIViewController {
         let bill = Double(billAmountTextField.text!) ?? 0
         // Convert people to integer
         let people = Double(people.text!) ?? 1
-        print("tip1: ", tip1)
-        print("tip2: ", tip2)
-        print("tip3: ", tip3)
+//        print("tip1: ", tip1)
+//        print("tip2: ", tip2)
+//        print("tip3: ", tip3)
         // Change Tip Control with user's inputs
         tipControl.setTitle(String(Int(tip1*100)) + "%", forSegmentAt: 0)
         tipControl.setTitle(String(Int(tip2*100)) + "%", forSegmentAt: 1)
