@@ -13,7 +13,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipAmountLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var totalLabel: UILabel!
-
+    @IBOutlet weak var people: UILabel!
+    @IBOutlet weak var average: UILabel!
+    @IBAction func stepper(_ sender: UIStepper) {
+        people.text = String(Int(sender.value))
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,9 +28,9 @@ class ViewController: UIViewController {
         let tip2 = defaults.double(forKey: "tip2")
         let tip3 = defaults.double(forKey: "tip3")
         // Change Tip Control with user's inputs
-        tipControl.setTitle(String(tip1*100) + "%", forSegmentAt: 0)
-        tipControl.setTitle(String(tip2*100) + "%", forSegmentAt: 1)
-        tipControl.setTitle(String(tip3*100) + "%", forSegmentAt: 2)
+        tipControl.setTitle(String(Int(tip1*100)) + "%", forSegmentAt: 0)
+        tipControl.setTitle(String(Int(tip2*100)) + "%", forSegmentAt: 1)
+        tipControl.setTitle(String(Int(tip3*100)) + "%", forSegmentAt: 2)
     }
 
     @IBAction func calculateTip(_ sender: Any) {
@@ -41,9 +45,9 @@ class ViewController: UIViewController {
         print("tip2: ", tip2)
         print("tip3: ", tip3)
         // Change Tip Control with user's inputs
-        tipControl.setTitle(String(tip1*100) + "%", forSegmentAt: 0)
-        tipControl.setTitle(String(tip2*100) + "%", forSegmentAt: 1)
-        tipControl.setTitle(String(tip3*100) + "%", forSegmentAt: 2)
+        tipControl.setTitle(String(Int(tip1*100)) + "%", forSegmentAt: 0)
+        tipControl.setTitle(String(Int(tip2*100)) + "%", forSegmentAt: 1)
+        tipControl.setTitle(String(Int(tip3*100)) + "%", forSegmentAt: 2)
         // Get Total tip by multiplying tip * tipPercentage
         let tipPercentages = [tip1, tip2, tip3]
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
@@ -54,6 +58,9 @@ class ViewController: UIViewController {
         tipAmountLabel.text = String(format: "$%.2f", tip)
         // Update Total amount
         totalLabel.text = String(format: "$%.2f", total)
+    
+    
+        
     }
     
 }
