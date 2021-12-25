@@ -20,10 +20,24 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var upperView: UIView!
     @IBOutlet weak var downView: UILabel!
+    // Use IBOutlet to get stepper attribute
+    @IBOutlet weak var stepperOutlet: UIStepper!
     @IBAction func resetButton(_ sender: Any) {
         billAmountTextField.text = nil
+        // Reset people label
         people.text = String(1)
+        // Reset stepper value
+        stepperOutlet.value = 0
     }
+    // Update when inserting Bill Amount
+    @IBAction func textOnChange(_ sender: Any) {
+        calculate()
+    }
+    // Update when updating the stepper
+    @IBAction func peopleOnChange(_ sender: Any) {
+        calculate()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -48,9 +62,15 @@ class ViewController: UIViewController {
         // Label Corner
         people.layer.cornerRadius = 5
         people.layer.masksToBounds = true
+        // Border width and color
+        downView.layer.borderWidth = 1
+        downView.layer.borderColor = UIColor.systemBlue.cgColor
     }
 
     @IBAction func calculateTip(_ sender: Any) {
+        calculate()
+    }
+    func calculate() {
         // Access UserDefaults
         let defaults = UserDefaults.standard
         let tip1 = defaults.double(forKey: "tip1")
@@ -79,7 +99,6 @@ class ViewController: UIViewController {
         totalLabel.text = String(format: "$%.2f", total)
         // Update average amount
         averageLabel.text = String(format: "$%.2f", average)
-    
         
     }
     
