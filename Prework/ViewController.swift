@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBAction func stepper(_ sender: UIStepper) {
         people.text = String(Int(sender.value))
     }
+    @IBOutlet weak var upperView: UIView!
+    @IBOutlet weak var downView: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,6 +33,11 @@ class ViewController: UIViewController {
         tipControl.setTitle(String(Int(tip1*100)) + "%", forSegmentAt: 0)
         tipControl.setTitle(String(Int(tip2*100)) + "%", forSegmentAt: 1)
         tipControl.setTitle(String(Int(tip3*100)) + "%", forSegmentAt: 2)
+        // First Responder
+        billAmountTextField.becomeFirstResponder()
+        // Round the upper and down View
+        upperView.layer.cornerRadius = 10
+        downView.layer.cornerRadius = 10
     }
 
     @IBAction func calculateTip(_ sender: Any) {
