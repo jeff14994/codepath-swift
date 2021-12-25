@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var averageLabel: UILabel!
     @IBAction func stepper(_ sender: UIStepper) {
         people.text = String(Int(sender.value))
+        // Update when updating the stepper
+        calculate()
     }
     @IBOutlet weak var upperView: UIView!
     @IBOutlet weak var downView: UILabel!
